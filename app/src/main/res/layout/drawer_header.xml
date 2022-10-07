@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="240dp"
+    android:background="@color/foodRunner_bg">
+
+    <ImageView
+        android:id="@+id/imgFoodRunnerLogoDrawer"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/food_runner_logo"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/txtNameDrawer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food Runner"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+</LinearLayout>

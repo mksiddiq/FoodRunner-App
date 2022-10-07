@@ -1,4 +1,4 @@
-package com.siddiq.foodrunner
+package com.siddiq.foodrunner.activity
 
 import android.content.Intent
 import android.content.SharedPreferences
@@ -6,8 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import com.siddiq.foodrunner.R
 
-class LoginCredentials : AppCompatActivity() {
+class LoginCredentialsActivity : AppCompatActivity() {
     lateinit var txtMobileNumber: TextView
     lateinit var txtPassword: TextView
     var getMobileNumber: String? = null
@@ -27,7 +28,7 @@ class LoginCredentials : AppCompatActivity() {
 
         btnLogout.setOnClickListener {
             sharedPreferences.edit().clear().apply()
-            val intent = Intent(this@LoginCredentials, LoginActivity::class.java)
+            val intent = Intent(this@LoginCredentialsActivity, LoginActivity::class.java)
             startActivity(intent)
             finish()
         }

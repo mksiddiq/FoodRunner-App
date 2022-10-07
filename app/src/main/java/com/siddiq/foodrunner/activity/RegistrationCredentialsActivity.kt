@@ -1,10 +1,11 @@
-package com.siddiq.foodrunner
+package com.siddiq.foodrunner.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import com.siddiq.foodrunner.R
 
-class RegistrationCredentials : AppCompatActivity() {
+class RegistrationCredentialsActivity : AppCompatActivity() {
     lateinit var txtNameValueRS: TextView
     lateinit var txtEmailValueRS: TextView
     lateinit var txtMobileNumberValueRS: TextView

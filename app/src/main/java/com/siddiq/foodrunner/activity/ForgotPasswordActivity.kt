@@ -1,4 +1,4 @@
-package com.siddiq.foodrunner
+package com.siddiq.foodrunner.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,8 +6,9 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.siddiq.foodrunner.R
 
-class ForgotPassword : AppCompatActivity() {
+class ForgotPasswordActivity : AppCompatActivity() {
     lateinit var btnNext: Button
     lateinit var etMobileNumberFP: EditText
     lateinit var etEmailFP: EditText
@@ -29,12 +30,12 @@ class ForgotPassword : AppCompatActivity() {
             email = etEmailFP.text.toString()
             if (etEmailFP.text.isEmpty() || etMobileNumberFP.text.isEmpty()) {
                 Toast.makeText(
-                    this@ForgotPassword,
+                    this@ForgotPasswordActivity,
                     "Please enter the credentials first",
                     Toast.LENGTH_SHORT
                 ).show()
             } else{
-                val intent = Intent(this@ForgotPassword, ForgotPasswordCredentials::class.java)
+                val intent = Intent(this@ForgotPasswordActivity, ForgotPasswordCredentialsActivity::class.java)
                 intent.putExtra("MobileNumber", mobileNumber)
                 intent.putExtra("Email", email)
                 startActivity(intent)

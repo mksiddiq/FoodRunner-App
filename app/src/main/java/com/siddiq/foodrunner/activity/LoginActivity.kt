@@ -1,4 +1,4 @@
-package com.siddiq.foodrunner
+package com.siddiq.foodrunner.activity
 
 import android.content.Intent
 import android.content.SharedPreferences
@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.siddiq.foodrunner.R
 
 class LoginActivity : AppCompatActivity() {
     lateinit var txtForgotPassword: TextView
@@ -28,20 +29,21 @@ class LoginActivity : AppCompatActivity() {
         btnLogin = findViewById(R.id.btnLogin)
         etMobileNumber = findViewById(R.id.etMobileNumberLogin)
         etPassword = findViewById(R.id.etPassword)
-        sharedPreferences = getSharedPreferences(getString(R.string.shared_preferences_file), MODE_PRIVATE)
+        sharedPreferences =
+            getSharedPreferences(getString(R.string.shared_preferences_file), MODE_PRIVATE)
 
         title = "Login"
 
         var isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false)
 
-        if(isLoggedIn){
-            val intent = Intent(this@LoginActivity, LoginCredentials::class.java)
+        if (isLoggedIn) {
+            val intent = Intent(this@LoginActivity, MainActivity::class.java)
             startActivity(intent)
             finish()
         }
 
         txtForgotPassword.setOnClickListener {
-            val intent = Intent(this@LoginActivity, ForgotPassword::class.java)
+            val intent = Intent(this@LoginActivity, ForgotPasswordActivity::class.java)
             startActivity(intent)
         }
 
@@ -60,14 +62,26 @@ class LoginActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
             } else {
-                val intent2 = Intent(this@LoginActivity, LoginCredentials::class.java)
+                val intent = Intent(this@LoginActivity, MainActivity::class.java)
+
+                val mobileNumberSP = sharedPreferences.getString("mobile_number", "100")
+                val passwordSP = sharedPreferences.getString("password", "default")
+                sharedPreferences.edit().putBoolean("isLoggedIn", true).apply()
+
+                if (mobileNumber.equals(mobileNumberSP) && password.equals(passwordSP)) {
+                    startActivity(intent)
+                } else {
+                    Toast.makeText(this@LoginActivity,
+                        "Enter valid credentials or register first",
+                        Toast.LENGTH_SHORT).show()
+                }
+
 //                intent2.putExtra("MobileNumber", mobileNumber)
 //                intent2.putExtra("Password", password)
-                sharedPreferences.edit().putBoolean("isLoggedIn", true).apply()
-                sharedPreferences.edit().putString("MobileNumber", mobileNumber).apply()
-                sharedPreferences.edit().putString("Password", password).apply()
-                startActivity(intent2)
-                finish()
+//                sharedPreferences.edit().putBoolean("isLoggedIn", true).apply()
+//                sharedPreferences.edit().putString("MobileNumber", mobileNumber).apply()
+//                sharedPreferences.edit().putString("Password", password).apply()
+
             }
 
         }

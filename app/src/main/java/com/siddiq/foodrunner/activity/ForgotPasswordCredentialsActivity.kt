@@ -1,10 +1,11 @@
-package com.siddiq.foodrunner
+package com.siddiq.foodrunner.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import com.siddiq.foodrunner.R
 
-class ForgotPasswordCredentials : AppCompatActivity() {
+class ForgotPasswordCredentialsActivity : AppCompatActivity() {
     lateinit var txtMobileNumberValueFP: TextView
     lateinit var txtEmailValueFP: TextView
     var getMobileNumber: String? = null

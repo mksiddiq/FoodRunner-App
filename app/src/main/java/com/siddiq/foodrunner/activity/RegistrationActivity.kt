@@ -1,11 +1,14 @@
-package com.siddiq.foodrunner
+package com.siddiq.foodrunner.activity
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.siddiq.foodrunner.R
 
 class RegistrationActivity : AppCompatActivity() {
     lateinit var btnRegister: Button
@@ -19,6 +22,8 @@ class RegistrationActivity : AppCompatActivity() {
     var email: String? = null
     var mobileNumber: String? = null
     var address: String? = null
+    var password: String? = null
+    lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,12 +38,16 @@ class RegistrationActivity : AppCompatActivity() {
         etAddress = findViewById(R.id.etAddress)
         etPasswordRegistration = findViewById(R.id.etPasswordRegistration)
         etConfirmPassword = findViewById(R.id.etConfirmPassword)
+        sharedPreferences =
+            getSharedPreferences(getString(R.string.shared_preferences_file), Context.MODE_PRIVATE)
 
         btnRegister.setOnClickListener {
             name = etName.text.toString()
             email = etEmail.text.toString()
             mobileNumber = etMobileNumberRegistration.text.toString()
             address = etAddress.text.toString()
+            password = etPasswordRegistration.text.toString()
+
             if (etName.text.isEmpty() == true || etEmail.text.isEmpty() == true || etMobileNumberRegistration.text.isEmpty() == true || etAddress.text.isEmpty() == true || etPasswordRegistration.text.isEmpty() == true || etConfirmPassword.text.isEmpty() == true) {
                 Toast.makeText(
                     this@RegistrationActivity,
@@ -46,12 +55,22 @@ class RegistrationActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
             } else {
-                val intent = Intent(this@RegistrationActivity, RegistrationCredentials::class.java)
-                intent.putExtra("Name", name)
-                intent.putExtra("Email", email)
-                intent.putExtra("MobileNumber", mobileNumber)
-                intent.putExtra("Address", address)
+                val intent =
+                    Intent(this@RegistrationActivity, LoginActivity::class.java)
+//                intent.putExtra("Name", name)
+//                intent.putExtra("Email", email)
+//                intent.putExtra("MobileNumber", mobileNumber)
+//                intent.putExtra("Address", address)
+                sharedPreferences.edit().putString("mobile_number", mobileNumber).apply()
+                sharedPreferences.edit().putString("password", password).apply()
+                sharedPreferences.edit().putString("name", name).apply()
+                sharedPreferences.edit().putString("email", email).apply()
+                sharedPreferences.edit().putString("address", address).apply()
+                Toast.makeText(this@RegistrationActivity,
+                    "Registration successful!",
+                    Toast.LENGTH_SHORT).show()
                 startActivity(intent)
+                finish()
             }
 
         }

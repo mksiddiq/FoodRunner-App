@@ -8,4 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="foodRunner_bg">#246EE9</color>
+    <color name="foodRunner_bg_dark">#1a237e</color>
+    <color name="pink_favourites">#FF00E8</color>
 </resources>

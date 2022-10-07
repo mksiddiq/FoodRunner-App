@@ -1,10 +1,11 @@
-package com.siddiq.foodrunner
+package com.siddiq.foodrunner.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import com.siddiq.foodrunner.R
 
 class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

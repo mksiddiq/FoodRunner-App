@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Siddiq Documents/Android App Dev/Food Runner App/app/src/main/res/drawable/box_recycler_home.xml" value="0.152" />
+        <entry key="..\:/Siddiq Documents/Android App Dev/Food Runner App/app/src/main/res/drawable/boxbg.xml" value="0.152" />
         <entry key="..\:/Siddiq Documents/Android App Dev/Food Runner App/app/src/main/res/drawable/ic_baseline_phone_android_24.xml" value="0.1565" />
+        <entry key="..\:/Siddiq Documents/Android App Dev/Food Runner App/app/src/main/res/drawable/ic_favourite.xml" value="0.152" />
+        <entry key="..\:/Siddiq Documents/Android App Dev/Food Runner App/app/src/main/res/drawable/ic_favourite_pink.xml" value="0.152" />
         <entry key="..\:/Siddiq Documents/Android App Dev/Food Runner App/app/src/main/res/drawable/ic_launcher_background.xml" value="0.171" />
         <entry key="..\:/Siddiq Documents/Android App Dev/Food Runner App/app/src/main/res/layout/activity_forgot_password.xml" value="0.2765625" />
         <entry key="..\:/Siddiq Documents/Android App Dev/Food Runner App/app/src/main/res/layout/activity_forgot_password_credentials.xml" value="0.2765625" />
@@ -14,6 +18,17 @@
         <entry key="..\:/Siddiq Documents/Android App Dev/Food Runner App/app/src/main/res/layout/activity_registration_credentials.xml" value="0.2765625" />
         <entry key="..\:/Siddiq Documents/Android App Dev/Food Runner App/app/src/main/res/layout/activity_splash_screen.xml" value="0.2765625" />
         <entry key="..\:/Siddiq Documents/Android App Dev/Food Runner App/app/src/main/res/layout/activity_view_credentials.xml" value="0.2765625" />
+        <entry key="..\:/Siddiq Documents/Android App Dev/Food Runner App/app/src/main/res/layout/drawer_header.xml" value="0.28958333333333336" />
+        <entry key="..\:/Siddiq Documents/Android App Dev/Food Runner App/app/src/main/res/layout/fragment_faqs.xml" value="0.22" />
+        <entry key="..\:/Siddiq Documents/Android App Dev/Food Runner App/app/src/main/res/layout/fragment_favourite_restaurant.xml" value="0.290625" />
+        <entry key="..\:/Siddiq Documents/Android App Dev/Food Runner App/app/src/main/res/layout/fragment_home.xml" value="0.290625" />
+        <entry key="..\:/Siddiq Documents/Android App Dev/Food Runner App/app/src/main/res/layout/fragment_my_profile.xml" value="0.290625" />
+        <entry key="..\:/Siddiq Documents/Android App Dev/Food Runner App/app/src/main/res/layout/recycler_favourites_single_row.xml" value="0.28958333333333336" />
+        <entry key="..\:/Siddiq Documents/Android App Dev/Food Runner App/app/src/main/res/layout/recycler_home_single_row.xml" value="0.28958333333333336" />
+        <entry key="..\:/Siddiq Documents/Android App Dev/Food Runner App/app/src/main/res/menu/drawer_menu.xml" value="0.28958333333333336" />
+        <entry key="..\:/Siddiq Documents/Android App Dev/Food Runner App/app/src/main/res/menu/menu_drawer.xml" value="0.22" />
+        <entry key="..\:/Siddiq Documents/Android App Dev/Food Runner App/app/src/main/res/mipmap-anydpi-v26/foodrunner_logo.xml" value="0.152" />
+        <entry key="..\:/Siddiq Documents/Android App Dev/Food Runner App/app/src/main/res/xml/network_security_config.xml" value="0.28958333333333336" />
       </map>
     </option>
   </component>

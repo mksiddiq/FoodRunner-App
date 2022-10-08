@@ -27,10 +27,6 @@
             android:exported="false"
             android:parentActivityName=".activity.LoginActivity" />
         <activity
-            android:name=".activity.RegistrationCredentialsActivity"
-            android:exported="false"
-            android:parentActivityName=".activity.LoginActivity" />
-        <activity
             android:name=".activity.LoginCredentialsActivity"
             android:exported="false"
             android:parentActivityName=".activity.LoginActivity" />
